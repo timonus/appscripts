@@ -10,7 +10,7 @@ def minify_json_file(file_path):
 def find_and_minify_json_files(directory):
     for root, _, files in os.walk(directory):
         for file in files:
-            if file.endswith('.json') or file.endswith('.ahap'):
+            if file.endswith('.json') or file.endswith('.ahap') or file.endswith('.geojson'):
                 file_path = os.path.join(root, file)
                 try:
                     minify_json_file(file_path)
