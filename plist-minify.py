@@ -34,7 +34,7 @@ def find_and_convert_plist_files(directory):
     overall_savings = 0
     for root, _, files in os.walk(directory):
         for file in files:
-            if file.endswith('.plist') or file.endswith('.intentdefinition') or file.endswith('.xcprivacy') or file.endswith('.strings') or file == 'CodeResources':
+            if file.endswith('.plist') or file.endswith('.intentdefinition') or file.endswith('.xcprivacy') or file.endswith('.strings') or file.endswith('.stringsdict') or file == 'CodeResources':
                 file_path = os.path.join(root, file)
                 binary_file_path = convert_to_binary_plist(file_path)
                 if binary_file_path:
